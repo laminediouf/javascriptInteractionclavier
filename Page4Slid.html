@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .conteneur{
+            position: absolute;
+            background-color: #24d3ff;
+            width: auto;
+            height: auto;
+            top: 50px;
+            left: 400px;
+            border: 5px solid crimson;
+        }
+        img{
+            position: center;
+        }
+    </style>
+</head>
+<body>
+<div class="conteneur">
+<img src='imagess/img1.jpg' style="display: block; width: 400px; height: 400px;">
+<img src='imagess/img2.jpg' style="display: none; width: 400px; height: 400px;" >
+<img src='imagess/img3.jpg' style="display: none; width: 400px; height: 400px;" >
+</div>
+<script type="text/javascript">
+    I = 0 ;
+    Imax = document.images.length - 1 ;
+    setTimeout(suivante, 2000) ;
+
+    function suivante()
+    {
+        document.images[I].style.display = "none" ;
+        if ( I < Imax )
+            I++;
+        else
+            I=0;
+        document.images[I].style.display = "block";
+        setTimeout(suivante, 2000) ;
+    }
+</script>
+
+</body>
+</html>
